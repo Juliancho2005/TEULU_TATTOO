@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre_ciudad');
 
-            $table->foreign('ID_Depto')->references('id')->on('Departamentos4');
+            $table->foreign('ID_Depto')->references('id')->on('Departamentosssss');
         });
     }
 
