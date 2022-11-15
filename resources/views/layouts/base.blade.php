@@ -22,10 +22,11 @@
                 </form>
 
                 <nav>
-                    <a href="#" class="a-link"> Home</a>
-                    <a href="#" class="a-link"> profile </a>
-                    <a href="#" class="a-link"> favorites </a>
-                    <a href="#" class="a-link"> more </a>
+                    
+                    <a href="#" class="a-link"><img src="" alt=""> Home</a>
+                    <a href="#" class="a-link"><img src="" alt=""> profile </a>
+                    <a href="#" class="a-link"><img src="" alt=""> favorites </a>
+                    <a href="#" class="a-link"><img src="" alt=""> more </a>
                 </nav>
             </div>
     </header>
