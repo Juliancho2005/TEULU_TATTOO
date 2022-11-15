@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* for header */
+
+header{
+
+    width: 100%;
+    margin: auto;
+    
+    
+}
+
+header .content{
+    display: flex;
+    min-width: 70px;
+    background-color: rgb(61, 143, 182);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding: 5px 30%;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+nav a {
+    font-weight: 600px;
+    padding: 30px;
+    transition: .3s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(61, 143, 182);
+    background-color: aliceblue;
+}
+
+.nombre {
+    color: rgb(255, 255, 255);
+}
+
+/* hero */

@@ -18,6 +18,3 @@ use App\Http\Controllers\Productocontroller;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('/User', UsersController::class);
-Route::resource('/productos',Productocontroller::class);
