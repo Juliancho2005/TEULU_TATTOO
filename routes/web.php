@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdministradorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Productocontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/User', UsersController::class);
+Route::resource('/productos',Productocontroller::class);
