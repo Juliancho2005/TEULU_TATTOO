@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdministradorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Productocontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//ruta para enviar una vista sin CRUD
+Route::get('/index', function (){
+    return view('main.index');
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+//rutas para controladores resource
+Route::resource('/productos', Productocontroller::class);
+
+Route::resource('/mensajes', Mensajeria1Controller::class);
+
+Route::resource('/user', UserController::class);
