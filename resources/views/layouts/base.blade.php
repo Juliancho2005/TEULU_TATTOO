@@ -11,12 +11,13 @@
     <header>
         <div class="contenidoHeader">       
             <a href="#" class="logo" >
-                <img src="" alt="logo">
+                <img src="assets/pulpoLogo.jpg" alt="logo" class="">
                 <h2 class="nombre"> Teulu - Tattoo</h2>
             </a>
             
             <form action="" class="buscar-nav">
-                <input type="text" name="" id="" class="input-buscar-nav">
+                
+                <input type="text" name="" id="" class="input-buscar-nav" placeholder="search product..." >
             </form>
 
             <nav>
