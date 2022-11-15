@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Mensajeria;
 
-class mensajeria extends Controller
+class MensajeriaController extends Controller
 {
     /**
      * Display a listing of the resource.
