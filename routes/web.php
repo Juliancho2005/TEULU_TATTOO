@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdministradorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productocontroller;
+use App\Http\Controllers\MensajeriaController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,6 @@ Route::get('/index', function (){
 //rutas para controladores resource
 Route::resource('/productos', Productocontroller::class);
 
-Route::resource('/mensajes', Mensajeria1Controller::class);
+Route::resource('/mensajes', MensajeriaController::class);
 
-Route::resource('/user', UserController::class);
+Route::resource('/user', UsersController::class);
