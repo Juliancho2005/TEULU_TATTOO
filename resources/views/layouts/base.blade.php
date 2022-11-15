@@ -23,7 +23,7 @@
 
                 <nav>
                     
-                    <a href="#" class="a-link"><img src="" alt=""> Home</a>
+                    <a href="#" class="a-link"><img src="asas" alt=""> Home</a>
                     <a href="#" class="a-link"><img src="" alt=""> profile </a>
                     <a href="#" class="a-link"><img src="" alt=""> favorites </a>
                     <a href="#" class="a-link"><img src="" alt=""> more </a>
