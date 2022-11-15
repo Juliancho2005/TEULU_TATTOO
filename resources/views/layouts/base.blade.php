@@ -9,24 +9,32 @@
     <title>base</title>
 </head>
 <body>
-    <div class="content">
-        @yield('content')
-    </div>
 
     <header>
             <div class="content">       
                 <a href="#" class="logo" >
                     <img src="img\yo.jpg" alt="logo">
-                    <h2 class="nombre"> Diever </h2>
+                    <h2 class="nombre"> Teulu - Tattoo</h2>
                 </a>
+
+                <form action="" class="buscar-nav">
+                    <input type="text" name="" id="">
+                </form>
+
                 <nav>
-                    <a href="#" class="a-link"> General </a>
-                    <a href="#" class="a-link"> Proyectos </a>
-                    <a href="#" class="a-link"> Cursos </a>
-                    <a href="#" class="a-link"> Notas </a>
+                    <a href="#" class="a-link"> Home</a>
+                    <a href="#" class="a-link"> profile </a>
+                    <a href="#" class="a-link"> favorites </a>
+                    <a href="#" class="a-link"> more </a>
                 </nav>
             </div>
     </header>
+
+    <div class="content">
+        @yield('content')
+    </div>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
