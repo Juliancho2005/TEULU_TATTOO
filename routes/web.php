@@ -15,6 +15,14 @@ use App\Http\Controllers\Productocontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//ruta para enviar una vista sin CRUD
+Route::get('/index', function (){
+    return view('main.index');
 });
+
+//rutas para controladores resource
+Route::resource('/productos', Productocontroller::class);
+
+Route::resource('/mensajes', Mensajeria1Controller::class);
+
+Route::resource('/user', UserController::class);
