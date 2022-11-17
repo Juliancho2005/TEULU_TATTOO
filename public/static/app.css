@@ -97,7 +97,44 @@ form .input-buscar-nav:focus{
 
 /* hero Slider */
 
-.arreglo-hero{
-    width: 500px;
-    height: 500px;
+.hero-slider{
+
+
+    width: 30%;
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+
+}
+
+/* chat-index */
+
+.chat{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.chat button{width: 300px;}
+
+
+
+
+/* Footer */
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .pie-pagina{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
