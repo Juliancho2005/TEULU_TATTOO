@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('prod_descripcion');
             $table->string('prod_categoria');
             $table->integer('prod_precio');
+            $table->binary('prod_img');
         });
     }
 
