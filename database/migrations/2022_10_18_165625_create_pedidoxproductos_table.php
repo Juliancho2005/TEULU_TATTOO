@@ -19,8 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('PRO_id');
             $table->unsignedBigInteger('PED_id');
 
-            $table->foreign('PRO_id')->references('id')->on('producto');
-            $table->foreign('PED_id')->references('id')->on('pedido');
+            $table->foreign('PRO_id')->references('id')->on('productos');
+            $table->foreign('PED_id')->references('id')->on('pedidos');
         });
     }
 

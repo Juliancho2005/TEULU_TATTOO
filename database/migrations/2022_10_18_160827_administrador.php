@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('administrador', function (Blueprint $table) {
+        Schema::table('administradores', function (Blueprint $table) {
             
         });
     }
@@ -23,9 +23,9 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down() 
     {
-        Schema::table('=', function (Blueprint $table) {
+        Schema::table('administradores', function (Blueprint $table) {
             $table->dropColumn('name');
         });
     }
