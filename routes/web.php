@@ -3,7 +3,7 @@
 use App\Http\Controllers\AdministradorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productocontroller;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\MensajeriaController;
 
 
@@ -25,3 +25,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//rutas para controladores resource
+Route::resource('/productos', Productocontroller::class);
+
+Route::resource('/mensajes', MensajeriaController::class);
+
+Route::resource('/user', UserController::class);
+
