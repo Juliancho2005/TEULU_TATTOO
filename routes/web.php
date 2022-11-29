@@ -18,14 +18,6 @@ use App\Http\Controllers\MensajeriaController;
 |
 */
 
-//ruta para enviar una vista sin CRUD
-Route::get('/index', function (){
-    return view('main.index');
+Route::get('/', function () {
+    return view('welcome');
 });
-
-//rutas para controladores resource
-Route::resource('/productos', Productocontroller::class);
-
-Route::resource('/mensajeria', MensajeriaController::class);
-
-Route::resource('/user', UsersController::class);
