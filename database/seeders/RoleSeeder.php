@@ -4,8 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+<<<<<<< Updated upstream
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+=======
+>>>>>>> Stashed changes
 
 class RoleSeeder extends Seeder
 {
@@ -22,6 +25,10 @@ class RoleSeeder extends Seeder
 
         //permisos
         Permission::create(['name' => 'crear publicaciones']);
+<<<<<<< Updated upstream
         Permission::create(['name' => 'EliminarUsuarios']);
+=======
+        
+>>>>>>> Stashed changes
     }
 }

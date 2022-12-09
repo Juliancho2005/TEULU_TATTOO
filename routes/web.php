@@ -22,9 +22,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< Updated upstream
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+Route::get('/login', function (){
+    return view('sesion.login');
+});
+>>>>>>> Stashed changes
 
 //rutas para controladores resource
 Route::resource('/productos', Productocontroller::class);
