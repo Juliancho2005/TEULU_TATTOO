@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('Id_productos_deseados');
             $table->string('Id_verificar');
             $table->string('Id_gestion_deseos');
+            $table->string('tatu');
         });
     }
 

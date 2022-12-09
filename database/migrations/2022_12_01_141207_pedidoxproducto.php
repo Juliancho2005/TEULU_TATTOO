@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('administradores', function (Blueprint $table) {
-            
+        Schema::table('pedidoxproductos', function (Blueprint $table) {
+            $table->foreign('PRO_id')->references('id')->on('productos');
+            $table->foreign('PED_id')->references('id')->on('pedidos');
         });
     }
 
@@ -23,9 +24,9 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down() 
+    public function down()
     {
-        Schema::table('administradores', function (Blueprint $table) {
+        Schema::table('pedidoxproductos', function (Blueprint $table) {
             $table->dropColumn('name');
         });
     }
