@@ -3,7 +3,7 @@
 
     <section id="hero">
         <h1>Ordena tu tatuaje <br>a domicilio</h1> <br>
-        <button id="see-products-btn">ver tatuajes</button>
+        <button id="see-products-btn buttons">ver tatuajes</button>
     </section>
 
     <section id="social-media">
@@ -56,7 +56,7 @@
 
 
     <div id="btn-chat-container">
-        <button id="btn-chat"> Chat with us!</button>
+        <button id="btn-chat buttons"> Chat with us!</button>
     </div>
 
     <div id="chat">
