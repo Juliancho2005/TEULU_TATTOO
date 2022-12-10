@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
-    <link rel="stylesheet" href="/static/app.css">
+    <link rel="stylesheet" href="/assets/static/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/media/icon-teulu.png">
+    <title>TeuluTatoo</title>
 </head>
 <body>
     <header>
-        <div class="contenidoHeader">       
-            <a href="#" class="logo" >
-                <img src="assets/pulpoLogo.jpg" alt="logo" class="">
-                <h2 class="nombre"> Teulu - Tattoo</h2>
-            </a>
-            
-            <form action="" class="buscar-nav">
-                
-                <input type="text" name="" id="" class="input-buscar-nav" placeholder="search product..." >
-            </form>
-
+        <div class="container">
+            <div class="logo">
+                <img class="icon" src="assets/media/icon-teulu.png" alt="teulu-icon">
+                <p>Teulu <br> Tatoo </p>
+            </div>
             <nav>
-                <a href="#" class="a-link"> <img src="assets/persona.png" alt="header-img"></a>
-                <a href="#" class="a-link"> <img src="assets/corazon.jpg" alt="header-img"></a>
-                <a href="#" class="a-link"> <img src="assets/menu.png" alt="header-img"></a>
+                <a href="favorites-header" id="favorites-header"><img src="assets/media/favorites-header.png" alt="favorites-header"></a>
+                <a href="sign-up-header" id="sign-up-header"><img src="assets/media/user-header.png" alt=""></a>
+                <a href="menu-header" id="menu-header">
+                    <button id="menu-header__btn">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>               
+                </a>
             </nav>
         </div>
     </header>
@@ -33,8 +32,15 @@
     </div>
 
     
-    
-    
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; TeuluTattoo 2022</p>
+        </div>
+    </footer>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
