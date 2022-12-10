@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TeuluTatoo</title>
-    <link rel="stylesheet" href="/static/app.css">
+    <link rel="stylesheet" href="/assets/static/app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/media/icon-teulu.png">
+    <title>TeuluTatoo</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <p class="logo">Teulu <br> Tatoo </p>
+            <div class="logo">
+                <img class="icon" src="assets/media/icon-teulu.png" alt="teulu-icon">
+                <p>Teulu <br> Tatoo </p>
+            </div>
             <nav>
-                <a href="favorites-header">favorites</a>
-                <a href="#sign-up-header">Sign up</a>
-                <a href="#menu-header">menu</a>
+                <a href="favorites-header" id="favorites-header"><img src="assets/media/favorites-header.png" alt="favorites-header"></a>
+                <a href="sign-up-header" id="sign-up-header"><img src="assets/media/user-header.png" alt=""></a>
+                <a href="menu-header" id="menu-header">
+                    <button id="menu-header__btn">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>               
+                </a>
             </nav>
         </div>
     </header>
