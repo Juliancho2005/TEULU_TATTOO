@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resourses/css/app.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- public Css -->
     <link rel="stylesheet" href="/assets/static/app.css">
@@ -33,54 +33,47 @@
                 <img class="icon" src="assets/media/icon-teulu.png" alt="teulu-icon">
                 {{ config('app.name', 'Laravel') }}
             </div>
-            <nav class="">
-                <a href="favorites-header" id="favorites-header"><img src="assets/media/favorites-header.png" alt="favorites-header"></a>
-                    <ul class="navbar-nav me-auto">
+            <nav>
+                <a href="favorites-header" id="favorites-header"><img src="assets/media/favorites-header.png" alt="favorites-header">Favorites</a>
 
-                    </ul>
+                @guest
+                    @if (Route::has('login'))
+                        <div>
+                            <img src="assets/media/user-header.png" alt="">
+                            <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </div>
+                    @endif
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                    @if (Route::has('register'))
+                        <div>
+                            <img src="assets/media/user-header.png" alt="user-header">
+                            <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </div>
+                    @endif
 
-                            @if (Route::has('register'))
-                                <li class="">
-                                    <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="">
-                                <a id="navbarDropdown" class="" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                    @else
+                            
+                    <a id="navbarDropdown" class="" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                    </a>
 
-                                <div class="" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                    <div class="" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                <a href="menu-header" id="menu-header">
-                    <button id="menu-header__btn">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </button>               
-                </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                    
+                    @endguest
+                    <a href="menu-header" id="menu-header">
+                        <button id="menu-header__btn">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </button>               
+                    </a>
+                
             </nav>
         </div>
     </header>
