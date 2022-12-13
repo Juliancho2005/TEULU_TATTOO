@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ListaDeseos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('Id_productos_deseados');
-            $table->string('Id_verificar');
-            $table->string('Id_gestion_deseos');
-            $table->string('tatu');
+        Schema::table('pedidoxproductos', function (Blueprint $table) {
+            $table->foreign('PRO_id')->references('id')->on('productos');
+            $table->foreign('PED_id')->references('id')->on('pedidos');
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ListaDeseos');
+        Schema::table('pedidoxproductos', function (Blueprint $table) {
+            $table->dropColumn('name');
+        });
     }
 };

@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('pedidoxproductos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('PRO_id');
-            $table->unsignedBigInteger('PED_id');
-
-            $table->foreign('PRO_id')->references('id')->on('productos');
-            $table->foreign('PED_id')->references('id')->on('pedidos');
+            $table->unsignedBigInteger('producto_id');
+            $table->foreign('producto_id')->references('id')->on('productos');
+            $table->unsignedBigInteger('pedido_id');
+            $table->foreign('pedido_id')->references('id')->on('pedidos');
         });
     }
 
