@@ -32,6 +32,10 @@ Route::get('/login', function (){
 });
 >>>>>>> Stashed changes
 
+Route::get('/login', function (){
+    return view('sesion.login');
+});
+
 //rutas para controladores resource
 Route::resource('/productos', Productocontroller::class);
 
