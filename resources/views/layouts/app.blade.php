@@ -77,5 +77,14 @@
             @yield('content')
         </main>
     </div>
+
+
+    
+    <footer>
+        <div class="footer-container">
+            <p>&copy; TeuluTattoo 2022</p>
+        </div>
+    </footer>
+
 </body>
 </html>

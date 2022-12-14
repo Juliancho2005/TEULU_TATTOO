@@ -51,12 +51,7 @@ li{ font-size: 1.25em;}
     flex-direction: column;
     height: 90vh;
     margin-bottom: 200px;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/assets/media/imgHero.jpg");
+    background-image: url('/assets/media/imgHero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -105,6 +100,7 @@ li{ font-size: 1.25em;}
 }
 
 .carousel-caption{
+    position: absolute;
     background-color: rgba(117, 40, 218, 0.2);
     border-radius: 20px;
 }
