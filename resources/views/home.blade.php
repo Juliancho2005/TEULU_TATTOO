@@ -23,7 +23,7 @@
 
     <section id="hero">
         <h1>Ordena tu tatuaje <br>a domicilio</h1> <br>
-        <button id="see-products-btn buttons">ver tatuajes</button>
+        <button id="buttons">ver tatuajes</button>
     </section>
 
     <section id="social-media">
@@ -46,22 +46,21 @@
                 <button type="button" id="btn-slider" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item  active" data-bs-interval="5000">
-                    <img src="/assets/media/tatto-slider-1.jpg" class="d-block w-100" alt="...">/7445162+6+3
-
+                <div class="carousel-item  active" data-bs-interval="4000">
+                    <img src="/assets/media/tatto-slider-1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>PROMOCIONES</h5>
                         <p>Descuento de 20% en art body</p>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000">
+                <div class="carousel-item" data-bs-interval="4000">
                     <img src="/assets/media/tatto-slider-2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>PROMOCIONES</h5>
                         <p>Obten un 2x1 para parejas</p>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000">
+                <div class="carousel-item" data-bs-interval="4000">
                     <img src="/assets/media/tatto-slider-3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>PROMOCIONES</h5>
