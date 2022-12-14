@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pedidoxproductos', function (Blueprint $table) {
-            $table->foreign('PRO_id')->references('id')->on('productos');
-            $table->foreign('PED_id')->references('id')->on('pedidos');
+        Schema::create('Tatuajes', function(Blueprint $table){
+            $table -> id();
+            $table -> string('tatu_nombre');
+            $table -> string('tatu_descripcion');
+            $table -> string('tatu_categoria');
+            $table -> string('tatu_precio');
+            $table -> string('tatu_imagen');
         });
     }
 
@@ -26,8 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('pedidoxproductos', function (Blueprint $table) {
-            $table->dropColumn('name');
-        });
+        Schema::dropIfExists('Tatuajes');
     }
 };
