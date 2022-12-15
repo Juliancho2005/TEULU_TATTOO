@@ -1,5 +1,3 @@
-@extends('layouts.plantilla')
-@section('contenido')
 <!DOCTYPE html>
 <html lang="en">
 <head>
