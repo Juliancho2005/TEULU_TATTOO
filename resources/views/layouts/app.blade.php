@@ -29,7 +29,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <img class="icon" src="assets/media/icon-teulu.png" alt="teulu-icon">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand color-acentoo" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -48,24 +48,24 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link color-acento" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link color-acento" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
     
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">{{ Auth::user()->name }}</a>
+                                    <a class="nav-link color-acento" href="#">{{ Auth::user()->name }}</a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a 
-                                        class="nav-link" 
+                                        class="nav-link color-acento" 
                                         href="{{ route('logout') }}" 
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -79,6 +79,14 @@
                                     @csrf
                                 </form>
                                 
+                                <li class="nav-item">
+                                    <a class="nav-link color-acento" href="#">favoritos</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link color-acento" href="#">acerca de Teulu</a>
+                                </li>
+
                             </li>
                         @endguest
                     </ul>
@@ -95,9 +103,20 @@
 
     
     <footer>
-        <div class="footer-container">
-            <p>&copy; TeuluTattoo 2022</p>
-        </div>
+        <div class="footer-container"> 
+            <p class="teulu">&copy; TeuluTattoo 2022</p>
+            <div class="contain_foot authors"> 
+               
+                <p>Juan Arevalo  
+                    ~  Jhon Chica
+                    ~  David Iglesias
+                    ~  Felipe Martinez
+                    ~  Julian Ruiz
+                </p>
+            </div>
+            
+        </div> 
+       
     </footer>
 
 </body>
