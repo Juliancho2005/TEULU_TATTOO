@@ -19,10 +19,13 @@ class RoleSeeder extends Seeder
         $rol1 = Role::create(['name' => 'Admin']);
         $rol2 = Role::create(['name' => 'Tatuador']);
         $rol3 = Role::create(['name' => 'Usuario']);
+        
+        $rol1 -> hasPermissionTo('gestionAdmin'); 
 
         //permisos
         Permission::create(['name' => 'crear publicaciones']);
         Permission::create(['name' => 'EliminarUsuarios']);
+        Permission::create(['name' => 'gestionAdmin']);
 
     }
 }

@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        $table -> id('id_cita');
-        $table -> unsignedBigInteger('id_solicitante');
-        $table -> foreign('id_solicitante') -> references ('id') -> on('users');
-        $table -> datetime('fecha');
+        Schema::table('Agenda', function (Blueprint $table) {
+            $table -> unsignedBigInteger('id_solicitante');
+            $table -> foreign('id_solicitante') -> references ('id') -> on('users');
+            $table -> datetime('fecha');
+        });
     }
 
     /**
@@ -26,6 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('Agenda', function (Blueprint $table) {
+            //
+        });
     }
 };
