@@ -87,7 +87,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link color-acento" href="(ruta ppara linkear about/about)">acerca de Teulu</a>
+                                    <a class="nav-link color-acento" href="about/about">acerca de Teulu</a>
                                 </li>
 
                             </li>
