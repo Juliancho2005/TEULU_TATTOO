@@ -23,6 +23,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/editUser', function (){
+    return view('Usuario.Edit');
+});
 
 Auth::routes();
 
