@@ -18,19 +18,25 @@ use App\Http\Controllers\MensajeriaController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< Updated upstream
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
+
 Route::get('/login', function (){
     return view('sesion.login');
 });
->>>>>>> Stashed changes
+
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/login', function (){
     return view('sesion.login');
@@ -47,3 +53,4 @@ Route::resource('/user', UserController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

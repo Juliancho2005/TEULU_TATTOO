@@ -1,0 +1,358 @@
+*{
+    font-family: Nunito;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body{  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.color-acento, .color-acentoo{
+    color: #332894;
+}
+
+.color-acento:hover{color: #fff;}
+
+.container .icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header{     
+    color: rgb(81, 32, 136);
+}
+
+.nav-item{
+    height: 40px;
+    margin-right: 20px;
+    transition: .3s all ease;
+}
+.nav-item:hover{
+    color: rgb(255, 250, 250);
+    background: linear-gradient(to right, #8d64da, #958ce4, #c1afe2);
+    background-size: 500%;
+    animation: formSubmitBackround 7s infinite alternate; ;
+    border: 2px solid #332894;
+    border-radius: 5px;
+}
+
+
+#dashboard-sesion-add{
+    display: none;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+/* For btn chat and see products on index */
+
+#buttons{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blueviolet;
+    transition: .7s ease all;
+}
+
+#buttons:hover{
+    background-color: rgba(29, 15, 43, 0.5);
+    color: rgb(247, 243, 243);
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 10px;
+}
+
+
+/* For hero on index */
+
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    margin-bottom: 200px;
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url(/public/assets/media/imgHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#hero h1{
+    color: white;
+    font-size: 5em;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+/* For slider on index */
+
+#slider-promotions{
+    margin: auto;
+    width: 60%;
+    margin-bottom: 200px;
+}
+
+#slider-content{
+    padding: 5;
+}
+
+#slider-promotions .carousel-inner{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    
+}
+
+#slider-promotions img{
+    width: 100%;
+}
+
+#slider-promotions .carousel-caption{
+    padding: 5px 5px 20px 5px;
+}
+
+#btn-slider{
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    
+}
+
+.carousel-caption{
+    position: absolute;
+    background-color: rgba(117, 40, 218, 0.2);
+    border-radius: 20px;
+    margin-bottom: 200px;
+    margin-left: 10px ;
+}
+
+/* For social media icons on index */
+
+#social-media{ height: 100px;}
+
+#social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#social-media li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#social-icon{
+    width: 50px;
+    height: 50px;
+    transition: .2s all ease;
+    
+}
+
+#social-icon:hover{
+    width: 60px;
+    height: 60px;
+    animation: iconsocial .2s;
+}
+
+@keyframes iconsocial{
+    0%{transform:rotate(-16deg);}
+    50%{transform:rotate(0deg)}
+    100%{transform:rotate(-16deg)}
+}
+/* For social media icons on index */
+
+#btn-chat-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+/* chat */
+
+#chat-container{
+    
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 5);
+    border-radius: 20px;
+
+}
+
+#chat-ventana{
+    padding: 14px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#output{
+    color: #aaa;
+    padding: 14px 0;
+    margin: 0 20px;
+}
+
+#actions p{
+    padding: 14px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#logout{
+    display: flex;
+    width: 100px;
+    width: 100px;
+}
+
+/* for login */
+
+.login-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+}
+
+.form-login{
+    background-color: #fff;
+    box-shadow: 1px 4px 20px rgb(135, 111, 190);
+}
+
+.form-login input{
+    
+    width: 260px;
+    margin: 5px;
+    height: 40px;
+    border-radius: 5px;
+    border: .5px solid #8678d680;
+    outline: none;
+    transition: .3s ease all;
+}
+
+.form-login .checkk{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color:  rgba(76, 59, 168, 0.5);
+    border-radius: 100%;
+    border: 1px solid rgba(34, 8, 182, 0.5);
+}
+
+.form-login .checkk:focus{
+    width: 20px;
+    height: 20px;
+    background-color:rgba(39, 17, 160, 0.5);
+}
+
+.form-login input:focus{
+    background-color:  rgba(34, 8, 182, 0.5);
+    border: 5px solid rgba(255, 255, 255);
+    width: 253px;
+    color: #fff;
+}
+
+.login-forgot{
+    display: flex; 
+    flex-direction: row; 
+    width: 500px;
+    margin-left: 155px;
+
+}
+
+.forgot-pass{
+    text-decoration: none;
+    margin-top: 20px;
+    color: #332894; 
+    margin-right: 120px;
+    transition: .3s all ease;
+}
+.forgot-pass:hover{
+    color: #332894; 
+    border: 2px solid rgba(34, 8, 182, 0.5);
+}
+
+.form-login .sendd{width: auto;}
+
+.form-login .send, .sendd{
+    width: 170px;
+    background: rgb(183, 170, 219);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .5s ease all;
+    border: 2px solid rgba(60, 12, 88, 0.5);
+}
+
+.form-login .send:hover, .sendd:hover{
+    background: linear-gradient(to right, #8d64da, #431d6e, #c1afe2);
+    background-size: 500%;
+    animation: formSubmitBackround 7s infinite alternate;
+    border: 2px solid rgba(60, 12, 88, 0.5);
+}
+
+@keyframes formSubmitBackround{
+    0%{background-position: left}
+    100%{background-position: right}
+}
+
+.alert-success{
+    background-color: #8e56ce;
+    color: #fff;
+}
+
+
+/* for footer */
+
+footer{
+    margin-top: auto;
+    padding: 40px;
+    background-image: linear-gradient(0deg,
+            rgba(123, 23, 180, 0.5),
+            rgba(72, 32, 95, 0.5)), url(/public/assets/media/imgHero.jpg);
+    background-size: cover;
+}
+footer .footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+footer p{
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+
+
+
+

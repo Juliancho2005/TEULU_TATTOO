@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card form-login">
                 <div class="card-header">{{ __('Confirm Password') }}</div>
 
                 <div class="card-body">
@@ -20,7 +20,7 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback color-acento" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -29,7 +29,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit sendd" class="btn btn-primary">
                                     {{ __('Confirm Password') }}
                                 </button>
 
