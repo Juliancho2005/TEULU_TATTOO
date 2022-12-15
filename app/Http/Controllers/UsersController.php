@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class UsersController extends Controller
+class Userecontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('Vistas.index', [
-            'Users'=> User::all()
-        ]);
+        return view ('Usuarios.tabla',['usuarios'=>Usuario::all()]);
     }
 
     /**
@@ -26,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+     return view('Usuarios.registro');
     }
 
     /**
@@ -37,10 +35,18 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //*$request->validate(['email'=>'required','nombre'=>'required','telefono'=>'required'|'min:10','contraseña'=>'required'|'min:7'|'max:40']);
+        $registro=new Usuario();
+        $registro->email=$request->get('email');
+        $registro->nombre=$request->get('nombre');
+        $registro->telefono=$request->get('telefono');
+        $registro->contraseña=$request->get('contraseña');
+        $registro->save();
+        return redirect('/adminusuario');
     }
 
     /**
+     * email nombre contraseña telefono
      * Display the specified resource.
      *
      * @param  int  $id
@@ -59,7 +65,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $buscar=Usuario::findorfail($id);
+        return view('Usuarios.modificacion',['resu'=>$buscar]);
     }
 
     /**
@@ -71,7 +78,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //$actualizau=$request->validate(['email'=>'required','nombre'=>'required','telefono'=>'required'|'min:10','contraseña'=>'required'|'min:7'|'max:23']);
+        $actualiza=Usuario::findorfail($id);
+        $actualiza->email=$request->get
+        ('email');
+        $actualiza->nombre=$request->get('nombre');
+        $actualiza->telefono=$request->get('telefono');
+        $actualiza->contraseña=$request->get('contraseña');
+        $actualiza->save();
+            return redirect('/adminusuario');
     }
 
     /**
@@ -82,6 +97,13 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $destruye=Usuario::find($id);
+        $destruye->delete();
+        return redirect('/adminusuario');
     }
+     public function confirmar($id){
+        $busc=Usuario::find($id);
+        return view('Usuarios.confirmacion',['resultado'=>$busc]);
+     }  
+    
 }
