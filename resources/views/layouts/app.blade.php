@@ -63,7 +63,7 @@
                         @else
     
                                 <li class="nav-item">
-                                    <a class="nav-link color-acento" href="rutauseredit">{{ Auth::user()->name }}</a>
+                                    <a class="nav-link color-acento" href="/editUser">{{ Auth::user()->name }}</a>
                                 </li>
 
                                 <li class="nav-item">

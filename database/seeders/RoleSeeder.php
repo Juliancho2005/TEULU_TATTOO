@@ -20,9 +20,12 @@ class RoleSeeder extends Seeder
         $rol2 = Role::create(['name' => 'Tatuador']);
         $rol3 = Role::create(['name' => 'Usuario']);
 
+        $rol1 -> hasPermissionTo('GestionTatu');
+
         //permisos
         Permission::create(['name' => 'crear publicaciones']);
         Permission::create(['name' => 'EliminarUsuarios']);
+        Permission::create(['name' => 'GestionTatu']);
 
     }
 }
