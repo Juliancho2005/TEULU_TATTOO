@@ -102,6 +102,6 @@ class AgendaController extends Controller
         $busquedaD = Cita::find($id);//Buscar el dato de la tabla que se va a borrar
         return view('Agenda.delete',[
         'busquedaD'=> $busquedaD
-        ]);
+        ]); //vcbvnbmn,mnbvcx//
     }
 }
