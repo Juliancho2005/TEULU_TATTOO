@@ -58,7 +58,7 @@ li{ font-size: 1.25em;}
 /* For btn chat and see products on index */
 
 #buttons{
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 5px;
@@ -67,6 +67,7 @@ li{ font-size: 1.25em;}
     color: white;
     background-color: blueviolet;
     transition: .7s ease all;
+    text-decoration: none;
 }
 
 #buttons:hover{

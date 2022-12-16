@@ -90,7 +90,7 @@
                                    <a class="nav-link color-acento" href="(ruta ver favoritos de gestionar)">Gestionar</a>
                                 </li>
                                 @else
-                                <p>vacio</p>
+                                <p></p>
                                 @endcan 
                             
                                 <li class="nav-item">

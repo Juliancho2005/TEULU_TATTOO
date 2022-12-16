@@ -23,7 +23,7 @@
 
     <section id="hero">
         <h1>Ordena tu tatuaje <br>a domicilio</h1> <br>
-        <button id="buttons">ver tatuajes</button>
+        <a href="/tatuajes" id="buttons"> Ver tatuajes</a>
     </section>
 
     <section id="social-media">
