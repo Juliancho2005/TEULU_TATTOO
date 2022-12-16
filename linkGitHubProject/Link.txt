@@ -1,0 +1,19 @@
+https://github.com/Juliancho2005/TEULU_TATTOO
+
+pasos:
+
+clonar proyecto
+crear archivo .env basado en el .env.example
+iniciar Xammp mysql y apache
+
+Abrir terminal en la carpeta del proyecto:
+
+ejecutar los siguientes comandos:
+
+composer install
+npm install
+php artisan key:generate
+php artisan migrate
+php artisan migrate:fresh --seed
+npm run dev
+php artisan serve
