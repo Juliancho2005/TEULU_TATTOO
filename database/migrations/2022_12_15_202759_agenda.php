@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        $table -> id('id_cita');
-        $table -> unsignedBigInteger('id_solicitante');
-        $table -> foreign('id_solicitante') -> references ('id') -> on('users');
-        $table -> datetime('fecha');
+        schema::create('citas', function (Blueprint $table){
+            $table -> id();
+            $table -> unsignedBigInteger('id_solicitante') -> nullable();
+            $table -> datetime('fecha');
+            $table -> timestamps();
+            // $table -> foreign('id_solicitante') -> references ('id') -> on('users');
+        });
     }
 
     /**
