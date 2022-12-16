@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cita;
 
-class agendaController extends Controller
+class AgendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class agendaController extends Controller
      */
     public function index()
     {
-        //
+        return view('Agenda.index', [
+            'citas' => Cita::all()
+        ]);
     }
 
     /**
@@ -23,7 +26,7 @@ class agendaController extends Controller
      */
     public function create()
     {
-        return view('');
+        return view('Agenda.create');
     }
 
     /**
@@ -35,9 +38,11 @@ class agendaController extends Controller
     public function store(Request $request)
     {
         $agendar = new Cita();
-        $agendar -> id_solicitante = $request->get('');
-        $agendar -> fecha = $request->get('');
-        return redirect('');
+        $agendar -> id_solicitante = $request->get('idu');
+        $agendar -> fecha = $request->get('fecha');
+        $agendar -> save();
+
+        return redirect('/agenda');
     }
 
     /**
@@ -59,7 +64,10 @@ class agendaController extends Controller
      */
     public function edit($id)
     {
-        return view('');
+        $search = Cita::findOrFail($id);
+        return view('Agenda.edit', [
+            'SearchC' => $search
+        ]);
     }
 
     /**
@@ -69,12 +77,12 @@ class agendaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id_cita)
+    public function update(Request $request, $id)
     {
-        $searchU = Cita::findOrFail($id_cita);
-        $searchU -> $id_solicitante = $request -> get('');
-        $searchU -> $fecha = $request -> get('');
-        return redirect ('');
+        $searchU = Cita::findOrFail($id);
+        $searchU -> fecha = $request -> get('fecha');
+        $searchU -> save(); 
+        return redirect ('/agenda');
     }
 
     /**
@@ -85,8 +93,15 @@ class agendaController extends Controller
      */
     public function destroy($id)
     {
-        $agendaDestroy = Cita::find($id_cita);
+        $agendaDestroy = Cita::find($id);
         $agendaDestroy -> delete();
-        return redirect ('');
+        return redirect ('/agenda');
+    }
+
+    public function confirmDelete($id){
+        $busquedaD = Cita::find($id);//Buscar el dato de la tabla que se va a borrar
+        return view('Agenda.delete',[
+        'busquedaD'=> $busquedaD
+        ]); //vcbvnbmn,mnbvcx//
     }
 }

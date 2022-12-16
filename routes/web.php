@@ -48,6 +48,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/agenda/{id}/confirmDelete', [AgendaController::class, 'confirmDelete']);
 
 Route::get('/login', function (){
     return view('sesion.login');
@@ -61,6 +62,8 @@ Route::resource('/mensajes', MensajeriaController::class);
 Route::resource('/user', UserController::class);
 
 Route::resource('/tatuajes', TatuajeController::class);
+
+Route::resource('/agenda', AgendaController::class);
 
 Auth::routes();
 
