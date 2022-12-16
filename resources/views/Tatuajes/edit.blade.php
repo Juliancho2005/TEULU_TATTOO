@@ -1,58 +1,71 @@
 @extends('layouts.app')
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card form-login">
+                <div class="card-header">Edita tu tatuaje : "{{$busquedaview->tatu_nombre}}"</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+                <div class="card-body login-container">
+                    <form  method="POST" action="/tatuajes/{{$busquedaview->id}}" enctype="multipart/form-data">
+                        @csrf
+                        @method('patch')
 
-<body>
-    <h1>Edita el tatuaje "{{$busquedaview->tatu_nombre}}"</h1>
-    <section class="login-section">
-        <div class="login-containerc">
-    <form action="/tatuajes/{{$busquedaview->id}}" method="post" enctype="multipart/form-data" class="form-login">
-        @csrf
-        @method('patch')
-        <label for="nombre">
-            <span>Nombre de tatuaje</span>
-            <input type="text" name="tatu_nombre" id="nombre" value="{{$busquedaview->tatu_nombre}}">
-        </label><br>
+                        <div class="row mb-3">
+                            <label for="nombre" class="col-md-4 col-form-label text-md-end">Nombre</label>
 
-        <label for="descripcion">
-            <span>Descripcion del tatuaje</span>
-            <input type="text" name="tatu_descripcion" id="descripcion" value="{{$busquedaview->tatu_descripcion}}">
-        </label><br>
+                            <div class="col-md-6">
+                                <input id="nombre" class="form-control" name="tatu_nombre" value="{{$busquedaview->tatu_nombre}}" required autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombre" class="col-md-4 col-form-label text-md-end">Descripcion</label>
 
-        <label for="categoria">
-            <span>Categoria del tatuaje</span>
-            <input type="text" name="tatu_categoria" id="categoria" value="{{$busquedaview->tatu_categoria}}">
-        </label><br>
+                            <div class="col-md-6">
+                                <input id="nombre"  class="form-control" name="tatu_descripcion" value="{{$busquedaview->tatu_descripcion}}" required autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombre" class="col-md-4 col-form-label text-md-end">Categoria</label>
 
-        <label for="precio">
-            <span>Precio</span>
-            <input type="number" name="tatu_precio" id="precio" value="{{$busquedaview->tatu_precio}}">
-        </label><br>
-        <label for="imagen">
-            <h6><span>Foto del tatuaje</span></h6>
-            
-            <img src="{{asset('storage').'/'.$busquedaview->tatu_imagen}}" width="250" alt="">
-            <br>
-            <br>
-            <input type="file" name="tatu_imagen" id="imagen" accept="image/*" value="">
-            <br>
-            <br>
-        </label>
-        
+                            <div class="col-md-6">
+                                <input id="nombre" class="form-control" name="tatu_categoria" value="{{$busquedaview->tatu_categoria}}" required autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombre" class="col-md-4 col-form-label text-md-end">Precio</label>
 
-        <input type="submit" value="Enviar" class="btn-bd-primary ">
+                            <div class="col-md-6">
+                                <input id="nombre" class="form-control" name="tatu_precio" value="{{$busquedaview->tatu_precio}}" required autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombre" class="col-md-4 col-form-label text-md-end">Tatuaje</label>
+                            <div class="col-md-6">
+                                <input class="form-control" type="file" name="tatu_imagen" id="imagen" accept="image/*" value="" required autofocus>
+                            </div>
+                            
+                        </div> 
+                        <br>
+                        <div class="row mb-3">
+                            <img src="{{asset('storage').'/'.$busquedaview->tatu_imagen}}" width="250" alt="">
+                        </div>
+
+                        
+                        <div class="row mb-0 login-forgot">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary send">
+                                    Editar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </section>
-    </form>
-</body>
+    </div>
+</div>
 
-</html>
+
+@endsection

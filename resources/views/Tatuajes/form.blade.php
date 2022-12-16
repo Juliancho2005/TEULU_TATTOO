@@ -1,51 +1,60 @@
 @extends('layouts.app')
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card form-login edit-log">
+            <div class="card-header">Crea un nuevo tatuaje</div>
+                <div class="card-body login-container">
+                    <form method="POST" action="/tatuajes" enctype="multipart/form-data">
+                        @csrf
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Nombre</label>
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="tatu_nombre" autofocus>
+                            </div>
+                        </div>
 
-<body>
-    <h1>Crea Un Nuevo Tatuaje</h1>
-    <section class="login-section">
-        <div class="login-containerc">
-    <form action="/tatuajes" method="post" enctype="multipart/form-data" class="form-login">
-        @csrf
-        <label for="nombre">
-            <span>Ingresa el nombre de tatuaje</span>
-            <input type="text" name="tatu_nombre" id="nombre">
-        </label><br>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Descripcion</label>
+                            <div class="col-md-6">
+                                <input id="categoria" type="text" class="form-control" name="tatu_descripcion" autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Categoria</label>
+                            <div class="col-md-6">
+                                <input id="categoria" type="text" class="form-control" name="tatu_categoria" autofocus>
+                            </div>
+                        </div>
 
-        <label for="descripcion">
-            <span>Ingresa La descripcion del tatuaje</span>
-            <input type="text" name="tatu_descripcion" id="descripcion">
-        </label><br>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Precio</label>
+                            <div class="col-md-6">
+                                <input id="precio" type="number" class="form-control" name="tatu_precio" autofocus>
+                            </div>
+                        </div>
 
-        <label for="categoria">
-            <span>Ingresa categoria del tatuaje</span>
-            <input type="text" name="tatu_categoria" id="categoria">
-        </label><br>
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">imagen</label>
+                            <div class="col-md-6">
+                                <input class="form-control" type="file" name="tatu_imagen" id="imagen" accept="image/*" autofocus>
+                            </div>
+                        </div>
 
-        <label for="precio">
-            <span>Ingresa el precio</span>
-            <input type="number" name=" tatu_precio" id="precio">
-        </label><br>
-        <label for="imagen">
-            <span>Ingresa una foto del tatuaje</span>
-            <input type="file" name="tatu_imagen" id="imagen" accept="image/*">
-        </label>
-        <br>
-
-        <input type="submit" value="Enviar" class="btn btn-secondary">
-    </form>
-   </div>
-</section>
-</body>
-
-</html>
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary send">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

@@ -1,3 +1,5 @@
+/* Generales */
+
 *{
     font-family: Nunito;
 }
@@ -13,11 +15,22 @@ body{
     flex-direction: column;
 }
 
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+
 .color-acento, .color-acentoo{
     color: #332894;
 }
 
 .color-acento:hover{color: #fff;}
+
+
+/* Encabezado */
 
 .container .icon{
     width: 40px;
@@ -43,19 +56,14 @@ header{
     border-radius: 5px;
 }
 
+/* Ocultar ventana de dashboard */
 
 #dashboard-sesion-add{
     display: none;
 }
 
-h1{ font-size: 3.5em;}
-h2{ font-size: 2.7em;}
-h3{ font-size: 2em;}
-p{ font-size: 1.25em;}
-ul{ list-style: none;}
-li{ font-size: 1.25em;}
 
-/* For btn chat and see products on index */
+/* botones de chat y ver producto */
 
 #buttons{
     font-size: 1.5em;
@@ -107,12 +115,13 @@ li{ font-size: 1.25em;}
     font-size: 1.75em;
 }
 
-/* For slider on index */
+/* estilos para el slider de promociones+ */
 
 #slider-promotions{
     margin: auto;
     width: 60%;
     margin-bottom: 200px;
+    padding: 70px;
 }
 
 #slider-content{
@@ -149,7 +158,7 @@ li{ font-size: 1.25em;}
     margin-left: 10px ;
 }
 
-/* For social media icons on index */
+/* estilos para iconos de las redes sociales */
 
 #social-media{ height: 100px;}
 
@@ -182,55 +191,9 @@ li{ font-size: 1.25em;}
     50%{transform:rotate(0deg)}
     100%{transform:rotate(-16deg)}
 }
-/* For social media icons on index */
 
-#btn-chat-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    
-}
 
-/* chat */
-
-#chat-container{
-    
-    max-width: 600px;
-    margin: 30px auto;
-    border: 1px solid #ddd;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 5);
-    border-radius: 20px;
-
-}
-
-#chat-ventana{
-    padding: 14px 0;
-    margin: 0 20px;
-    border-bottom: 1px solid #e9e9e9;
-    color: #555;
-}
-
-#output{
-    color: #aaa;
-    padding: 14px 0;
-    margin: 0 20px;
-}
-
-#actions p{
-    padding: 14px 0;
-    margin: 0 20px;
-    border-bottom: 1px solid #e9e9e9;
-    color: #555;
-}
-
-#logout{
-    display: flex;
-    width: 100px;
-    width: 100px;
-}
-
-/* for login */
+/* Estilo general para formularios */
 
 .login-section{
     display: flex;
@@ -332,7 +295,7 @@ li{ font-size: 1.25em;}
 }
 
 
-/* for about */
+/* Estilo de acerca de */
 
 .h1-about{
     font-family: system-ui;
@@ -377,7 +340,9 @@ li{ font-size: 1.25em;}
     height: 100%;
 }
 
-/* for footer */
+
+
+/* Estilos del pie de pagina */
 
 footer{
     margin-top: auto;
