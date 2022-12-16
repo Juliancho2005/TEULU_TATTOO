@@ -35,6 +35,13 @@ Route::get('/login', function (){
     return view('sesion.login');
 });
 
+Route::get('/about', function (){
+    return view('about.about');
+});
+
+Route::get('/GestionFavoritos', function (){
+    return view('Productos.favorites');
+});
 
 Auth::routes();
 

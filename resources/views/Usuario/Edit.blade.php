@@ -7,7 +7,7 @@
     <title>Edit</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/home" method="head">
         <h1>Editar tu usuario</h1>
         <br>
         <br>
