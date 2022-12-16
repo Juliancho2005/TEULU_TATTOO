@@ -1,3 +1,4 @@
+@can('GestionProducts')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,3 +11,6 @@
     <h1>Esta es la gestion de productos</h1>
 </body>
 </html>
+@else
+<h1></h1>
+@endcan

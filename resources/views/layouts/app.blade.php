@@ -85,18 +85,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link color-acento" href="(ruta ver favoritos de crud producto)">favoritos</a>
                                 </li>
-
-                                @can('gestionAdmin')  
-
-                                    <li class="nav-item">
-                                        <a class="nav-link color-acento" href="(ruta ver favoritos de gestionar)">Gestionar</a>
-                                    </li>
+                                @can('gestionAdmin')
+                                <li class="nav-item">
+                                   <a class="nav-link color-acento" href="(ruta ver favoritos de gestionar)">Gestionar</a>
+                                </li>
                                 @else
-
-                                    <div></div>
-
-                                @endcan
-
+                                <h1></h1>
+                                @endcan 
+                            
                                 <li class="nav-item">
                                     <a class="nav-link color-acento" href="about/about">acerca de Teulu</a>
                                 </li>

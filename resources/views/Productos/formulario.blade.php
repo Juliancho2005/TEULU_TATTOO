@@ -1,3 +1,4 @@
+@can('CrearTatu')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,3 +31,6 @@
 </form>
 </body>
 </html>
+@else
+<h1></h1>
+@endcan

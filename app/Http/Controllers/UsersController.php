@@ -80,11 +80,9 @@ class Userecontroller extends Controller
     {
         //$actualizau=$request->validate(['email'=>'required','nombre'=>'required','telefono'=>'required'|'min:10','contraseña'=>'required'|'min:7'|'max:23']);
         $actualiza=Usuario::findorfail($id);
-        $actualiza->email=$request->get
-        ('email');
-        $actualiza->nombre=$request->get('nombre');
-        $actualiza->telefono=$request->get('telefono');
-        $actualiza->contraseña=$request->get('contraseña');
+        $actualiza->email=$request->get('email');
+        $actualiza->nombre=$request->get('name');
+        $actualiza->contraseña=$request->get('password');
         $actualiza->save();
             return redirect('/adminusuario');
     }

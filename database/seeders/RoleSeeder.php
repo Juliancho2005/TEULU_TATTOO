@@ -17,21 +17,21 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $rol1 = Role::create(['name' => 'Admin']);
-        $rol2 = Role::create(['name' => 'Tatuador']);
         $rol3 = Role::create(['name' => 'Usuario']);
         
-        $rol1 -> hasPermissionTo('gestionAdmin'); 
-
-        $rol1 -> hasPermissionTo('GestionTatu');
+        $rol1 -> hasPermissionTo('gestionAdmin');
+        $rol1 -> hasPermissionTo('CrearTatu');
+        $rol1 -> hasPermissionTo('GestionUsers');
+        $rol1 -> hasPermissionTo('GestionProducts');
+        $rol1 -> hasPermissionTo('GestionAdmin');
 
         //permisos
-        Permission::create(['name' => 'crear publicaciones']);
-        Permission::create(['name' => 'EliminarUsuarios']);
-<<<<<<< HEAD
-        Permission::create(['name' => 'GestionTatu']);
-=======
         Permission::create(['name' => 'gestionAdmin']);
->>>>>>> 49c7ad06d0cbdbef04efc12679acbcf5827984a2
+        Permission::create(['name' => 'CrearTatu']);
+        Permission::create(['name' => 'GestionUsers']);
+        Permission::create(['name' => 'GestionProducts']);
+        Permission::create(['name' => 'GestionAdmin']);
+
 
     }
 }
