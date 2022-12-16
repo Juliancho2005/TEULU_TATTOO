@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Productocontroller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MensajeriaController;
+use App\Http\Controllers\TatuajeController;
 
 
 /*
@@ -59,6 +60,7 @@ Route::resource('/mensajes', MensajeriaController::class);
 
 Route::resource('/user', UserController::class);
 
+Route::resource('/tatuajes', TatuajeController::class);
 
 Auth::routes();
 
