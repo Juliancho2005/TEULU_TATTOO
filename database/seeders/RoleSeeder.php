@@ -30,7 +30,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'CrearTatu']);
         Permission::create(['name' => 'GestionUsers']);
         Permission::create(['name' => 'GestionProducts']);
-        Permission::create(['name' => 'GestionAdmin']);
+
 
 
     }

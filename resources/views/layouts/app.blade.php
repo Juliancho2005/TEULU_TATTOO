@@ -90,11 +90,11 @@
                                    <a class="nav-link color-acento" href="(ruta ver favoritos de gestionar)">Gestionar</a>
                                 </li>
                                 @else
-                                <h1></h1>
+                                <p>vacio</p>
                                 @endcan 
                             
                                 <li class="nav-item">
-                                    <a class="nav-link color-acento" href="about/about">acerca de Teulu</a>
+                                    <a class="nav-link color-acento" href="/about">acerca de Teulu</a>
                                 </li>
 
                             </li>
